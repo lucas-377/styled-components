@@ -24,7 +24,7 @@ const Content = styled.section`
 const Container = () => {
   return (
     <ContainerWrapper>
-      <Titulo>Olá Fulano!</Titulo>
+      <Titulo>Olá, Fulano!</Titulo>
       <Content>
         <Conta />
         <Extrato />
