@@ -5,7 +5,7 @@ import privado from "../../assets/images/privado.svg";
 import olho_icone from "../../assets/images/olho.svg";
 import dinheiro from "../../assets/images/dinheiro.svg";
 
-import { Icon } from '../UI/index';
+import { Icon, Box, Button, Total, Detail } from '../UI/index';
 
 const IconMargin = styled(Icon)`
   margin: ${(props) => props.margin };
@@ -19,7 +19,7 @@ const Conta = () => {
   };
 
   return (
-    <div className="box">
+    <Box>
       <h2>Conta</h2>
       <div style={{ fontSize: "26px", padding: "20px 0" }}>
         Saldo disponível{" "}
@@ -27,19 +27,19 @@ const Conta = () => {
           <Icon src={dinheiro} alt="Ícone Saldo" />
         </span>
         {toggleState ? (
-          <div className="saldo">
-            <span className="detalhe">R$</span> 0,00{" "}
-          </div>
+          <Total>
+            <Detail>R$</Detail> 0,00{" "}
+          </Total>
         ) : null}
       </div>
 
-      <button className="btn" onClick={toggleHandler}>
+      <Button onClick={toggleHandler}>
         <IconMargin margin="2px 0 0 0"
           src={toggleState ? privado : olho_icone}
           alt="Privacidade do Saldo"
         />
-      </button>
-    </div>
+      </Button>
+    </Box>
   );
 };
 
