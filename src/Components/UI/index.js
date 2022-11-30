@@ -5,6 +5,10 @@ export const Icon = styled.img`
   width: 25px;
 `;
 
+export const IconThemed = styled(Icon)`
+  filter: ${({ theme }) => theme.filter};
+`;
+
 export const Box = styled.div`
   display: flex;
   flex-direction: column;
